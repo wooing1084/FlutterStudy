@@ -24,7 +24,6 @@ class DependencyManagePage extends StatelessWidget {
                   //"기본적인 put방식"
                   //Get.to함수 인자중에 binding은 해당 페이지와 컨트롤러를 결합시키는 역할을 한다.
                   //페이지가 닫힐때는 바인딩된 컨트롤러도 같이 삭제되어 메모리 소모를 줄일 수 있다.
-                  //그러나 컨트롤러에 값이 저장되고있는경우엔 삭제되지 않는것으로 보인다(테스트해본것임)
                   Get.to(GetPut(), binding: BindingsBuilder(() {
                     Get.put(DependencyController());
                   }));
