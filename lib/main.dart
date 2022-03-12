@@ -1,14 +1,15 @@
+import 'package:flutproj/src/InstaUploadPage.dart';
 
-import 'src/pages/Binding/BindingsCollect.dart';
-import 'src/pages/named/firstNamePage.dart';
-import 'src/pages/named/secondNamedPage.dart';
+import 'src/controller/BottomNavController.dart';
+import 'src/testPages/pages/Binding/BindingsCollect.dart';
+import 'src/testPages/pages/named/firstNamePage.dart';
+import 'src/testPages/pages/named/secondNamedPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'src/contoroller/BottomNavController.dart';
-import 'src/contoroller/CountControllerWithGetX.dart';
-import 'src/pages/Binding/BindingPage.dart';
-import 'src/pages/named/ArgumentTestPage.dart';
-import 'src/pages/test.dart';
+import 'src/testPages/contoroller/CountControllerWithGetX.dart';
+import 'src/testPages/pages/Binding/BindingPage.dart';
+import 'src/testPages/pages/named/ArgumentTestPage.dart';
+import 'src/testPages/pages/test.dart';
 import 'src/InstaMainPage.dart';
 
 void main() {
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
               titleTextStyle: TextStyle(color: Colors.black)
           )
       ),
-      //home: MainPage(),
-      home: Test(),
+      home: MainPage(),
+      //home: Test(),
       getPages: Pages(),
       initialBinding: InitBinding(),
     );
@@ -55,6 +56,7 @@ List<GetPage<dynamic>> Pages()
     GetPage(name: '/secondPage', page: () => secondNamedPage()),
     GetPage(name: '/argumentTestPage', page: () => ArgumentTestPage()),
     //바인딩하는 방법 1. GetPage(라우트)선언할때 바인딩해주기
-    GetPage(name: '/binding', page: () => BindingPage(), binding: BindingsCollect())
+    GetPage(name: '/binding', page: () => BindingPage(), binding: BindingsCollect()),
+    GetPage(name: '/uploadPage',page: () => InstaUploadPage())
   ];
 }

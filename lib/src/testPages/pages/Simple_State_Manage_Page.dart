@@ -1,7 +1,7 @@
-import 'package:flutproj/src/contoroller/CountControllerWithGetX.dart';
-import 'package:flutproj/src/contoroller/countControllerWithProvider.dart';
-import 'package:flutproj/src/pages/state/WithGetXState.dart';
-import 'package:flutproj/src/pages/state/WithProviderState.dart';
+import 'package:flutproj/src/testPages/contoroller/CountControllerWithGetX.dart';
+import 'package:flutproj/src/testPages/contoroller/countControllerWithProvider.dart';
+import 'package:flutproj/src/testPages/pages/state/WithGetXState.dart';
+import 'package:flutproj/src/testPages/pages/state/WithProviderState.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';

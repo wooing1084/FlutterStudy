@@ -1,4 +1,4 @@
-import 'package:flutproj/src/contoroller/Dependency_Controller.dart';
+import 'package:flutproj/src/testPages/contoroller/Dependency_Controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

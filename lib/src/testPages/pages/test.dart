@@ -1,9 +1,9 @@
-import 'package:flutproj/src/contoroller/CountControllerReactive.dart';
-import 'package:flutproj/src/pages/Simple_State_Manage_Page.dart';
+import 'package:flutproj/src/components/imageData.dart';
+import 'package:flutproj/src/testPages/contoroller/CountControllerReactive.dart';
+import 'package:flutproj/src/testPages/pages/Simple_State_Manage_Page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
-import '../components/imageData.dart';
 import 'Reactive_State_Manage_Page.dart';
 import 'dependencys/Dependency_Manage_Page.dart';
 import 'normal/firstPage.dart';
