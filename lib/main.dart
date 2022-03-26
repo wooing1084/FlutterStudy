@@ -1,6 +1,5 @@
-import 'package:flutproj/src/InstaUploadPage.dart';
-
-import 'src/controller/BottomNavController.dart';
+import 'package:flutproj/src/instaCloneCoding/InstaUploadPage.dart';
+import 'src/instaCloneCoding/controller/BottomNavController.dart';
 import 'src/testPages/pages/Binding/BindingsCollect.dart';
 import 'src/testPages/pages/named/firstNamePage.dart';
 import 'src/testPages/pages/named/secondNamedPage.dart';
@@ -10,7 +9,7 @@ import 'src/testPages/contoroller/CountControllerWithGetX.dart';
 import 'src/testPages/pages/Binding/BindingPage.dart';
 import 'src/testPages/pages/named/ArgumentTestPage.dart';
 import 'src/testPages/pages/test.dart';
-import 'src/InstaMainPage.dart';
+import 'src/instaCloneCoding/InstaMainPage.dart';
 
 void main() {
   runApp(MyApp());

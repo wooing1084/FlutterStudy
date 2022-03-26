@@ -1,6 +1,7 @@
+import 'package:flutproj/src/instaCloneCoding/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'components/imageData.dart';
+import '../components/imageData.dart';
 import 'controller/BottomNavController.dart';
 
 class MainPage extends StatelessWidget {
@@ -10,11 +11,10 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
         child: Obx(() => Scaffold(
-          appBar: AppBar(),
           body: IndexedStack(
             index: Get.find<BottomNavController>().curIdx.value,
             children: [
-              Container(child: Center(child: Text('home'),),),
+              const Home(),
               Container(child: Center(child: Text('search'),),),
               Container(child: Center(child: Text('upload'),),),
               Container(child: Center(child: Text('active'),),),
