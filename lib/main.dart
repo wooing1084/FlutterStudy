@@ -30,11 +30,9 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
               backgroundColor: Colors.white,
-              titleTextStyle: TextStyle(color: Colors.black)
-          )
-      ),
-      home: MainPage(),
-      //home: Test(),
+              titleTextStyle: TextStyle(color: Colors.black))),
+      //home: MainPage(),
+      home: Test(),
       getPages: Pages(),
       initialBinding: InitBinding(),
     );
@@ -42,20 +40,22 @@ class MyApp extends StatelessWidget {
 }
 
 InitBinding() {
-  Get.put(BottomNavController(),permanent: true);
+  Get.put(BottomNavController(), permanent: true);
 }
 
 //라우트 관리 함수
-List<GetPage<dynamic>> Pages()
-{
+List<GetPage<dynamic>> Pages() {
   return [
     GetPage(name: '/', page: () => Test()),
-    GetPage(name: '/main',page: () => MainPage()),
+    GetPage(name: '/main', page: () => MainPage()),
     GetPage(name: '/firstPage', page: () => firstNamedPage()),
     GetPage(name: '/secondPage', page: () => secondNamedPage()),
     GetPage(name: '/argumentTestPage', page: () => ArgumentTestPage()),
     //바인딩하는 방법 1. GetPage(라우트)선언할때 바인딩해주기
-    GetPage(name: '/binding', page: () => BindingPage(), binding: BindingsCollect()),
-    GetPage(name: '/uploadPage',page: () => InstaUploadPage())
+    GetPage(
+        name: '/binding',
+        page: () => BindingPage(),
+        binding: BindingsCollect()),
+    GetPage(name: '/uploadPage', page: () => InstaUploadPage())
   ];
 }

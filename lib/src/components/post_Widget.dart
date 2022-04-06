@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:expandable_text/expandable_text.dart';
 import 'package:flutproj/src/components/avatar_widget.dart';
 import 'package:flutproj/src/components/imageData.dart';
 import 'package:flutter/material.dart';
@@ -101,22 +102,40 @@ class PostWidget extends StatelessWidget {
   Widget _descript() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
+      // ignore: prefer_const_literals_to_create_immutables
       children: [
-        Text(
-          '좋아요 999개',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        Text('예시 컨텐츠입니다.\n예시 컨텐츠입니다.\n예시 컨텐츠입니다.\n예시 컨텐츠입니다.')
+        Text('좋아요 999개', style: TextStyle(fontWeight: FontWeight.bold)),
+        ExpandableText(
+          '예시 컨텐츠입니다.\n예시 컨텐츠입니다.\n예시 컨텐츠입니다.\n예시 컨텐츠입니다.', //N개의 줄 텍스트
+          prefixText: '정성훈', //댓글의 이름부분(앞부분 고정)
+          prefixStyle: TextStyle(fontWeight: FontWeight.bold), //앞부분 고정 텍스트 스타일
+          onPrefixTap: () {}, //이름부분 선택시 하이퍼링크
+          expandText: '더보기', //더보기 텍스트
+          collapseText: '닫기', //닫기 텍스트
+          expandOnTextTap: true, //더보기 하이퍼링크 주변 클릭
+          collapseOnTextTap: true, //닫기 하이퍼링크 주변 클릭
+          maxLines: 3, //더보기 표시 전 최대 줄 수
+          linkColor: Colors.black, //링크 색상
+        )
       ],
     );
   }
 
   Widget _reply() {
-    return Container();
+    return GestureDetector(
+      onTap: () {},
+      child: Text(
+        '댓글 199개 모두 보기',
+        style: TextStyle(color: Colors.grey, fontSize: 13),
+      ),
+    );
   }
 
   Widget _dateAgo() {
-    return Container();
+    return Text(
+      '1일전',
+      style: TextStyle(color: Colors.grey, fontSize: 13),
+    );
   }
 
   @override
@@ -124,16 +143,16 @@ class PostWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(top: 20),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           _header(),
           _image(),
           _info(),
           _descript(),
-          // _reply(),
-          // _dateAgo()
+          _reply(),
+          _dateAgo()
         ],
       ),
-//      decoration: BoxDecoration(border: Border.all(width: 1,color: Colors.black)),
     );
   }
 }
