@@ -1,4 +1,5 @@
 import 'package:flutproj/src/instaCloneCoding/InstaUploadPage.dart';
+import 'package:flutproj/src/testPages/firebaseTestPage.dart';
 import 'src/instaCloneCoding/controller/BottomNavController.dart';
 import 'src/testPages/pages/Binding/BindingsCollect.dart';
 import 'src/testPages/pages/named/firstNamePage.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
               titleTextStyle: TextStyle(color: Colors.black))),
       //home: MainPage(),
       home: Test(),
+      //home: FirebaseTestPage(),
       getPages: Pages(),
       initialBinding: InitBinding(),
     );
@@ -56,6 +58,7 @@ List<GetPage<dynamic>> Pages() {
         name: '/binding',
         page: () => BindingPage(),
         binding: BindingsCollect()),
-    GetPage(name: '/uploadPage', page: () => InstaUploadPage())
+    GetPage(name: '/uploadPage', page: () => InstaUploadPage()),
+    GetPage(name: '/FirebaseTestPage', page: () => FirebaseTestPage())
   ];
 }

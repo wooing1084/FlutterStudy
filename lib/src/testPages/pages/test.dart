@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutproj/src/components/imageData.dart';
 import 'package:flutproj/src/testPages/contoroller/CountControllerReactive.dart';
 import 'package:flutproj/src/testPages/pages/Simple_State_Manage_Page.dart';
@@ -20,6 +21,7 @@ class Test extends StatelessWidget {
     //Row나 Column등 위젯중 padding이나 margin또는 데코레이션이 안되는 위젯이 있다
     //이를 해결하기위해서는 SizedBox(컨테이너보다 기능은 적고 속도는 빠름)나 Container로 덮으면 된다.
     //Container(child: Icon(Icons.water_damage), padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),), 이런식으로
+
     Get.put(CountControllerReactive());
 
     return Scaffold(
@@ -42,7 +44,7 @@ class Test extends StatelessWidget {
           ),
           Center(
               child: Container(
-            height: 300,
+            height: 500,
             child: ListView(
               scrollDirection: Axis.vertical,
               children: [
@@ -101,6 +103,11 @@ class Test extends StatelessWidget {
                     child: Text('바인딩'),
                     onPressed: () {
                       Get.toNamed('/binding');
+                    }),
+                RaisedButton(
+                    child: Text('파이어베이스 테스트 페이지'),
+                    onPressed: () {
+                      Get.toNamed('/FirebaseTestPage');
                     }),
               ],
             ),
