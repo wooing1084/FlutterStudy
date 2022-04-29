@@ -48,24 +48,24 @@ class Test extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.vertical,
               children: [
-                RaisedButton(
+                ElevatedButton(
                     child: Text('일반적인 라우트'),
                     onPressed: () {
                       //Navigator.of(context).push(MaterialPageRoute(builder: (_) => firstPage()));
                       Get.to(firstPage());
                     }),
-                RaisedButton(
+                ElevatedButton(
                     child: Text('네이밍 라우트'),
                     onPressed: () {
                       Get.toNamed('/firstPage');
                     }),
-                RaisedButton(
+                ElevatedButton(
                     child: Text('Arguments 넘기기'),
                     onPressed: () {
                       Get.toNamed('/argumentTestPage',
                           arguments: {"name": "정성훈", "age": 22});
                     }),
-                RaisedButton(
+                ElevatedButton(
                     //상태관리 하는법
                     //컨트롤러라는 이름의 클래스를 생성한다.(단순형은 GetxController를 extends해야함)
                     //이벤트 발생시 화면을 업데이트 해야하니 컨트롤러 클래스의 이벤트 함수 안에 upadte()로 화면이 업데이트 되야함을 알림
@@ -77,7 +77,7 @@ class Test extends StatelessWidget {
                     onPressed: () {
                       Get.to(SimpleStateManagePage());
                     }),
-                RaisedButton(
+                ElevatedButton(
                   //반응형의 경우엔 FXInt와 같은 변수형으로 값에 변화가 있는지 실시간으로 확인하여 변화가 있을시 업데이트함
                   //컨트롤러라는 이름으로 클래스를 생성하고 반응형으로 확인하려는 변수를 선언(RxInt count = 0.obs;)하기만 하면 컨트롤러의 역할은 끝이다.
                   //이제 반응형으로 상태가 변경되어야하는 페이지에 Get.Put(컨트롤러())로 선언 후 Obx((){})
@@ -94,17 +94,17 @@ class Test extends StatelessWidget {
                 //       Get.find<CountControllerReactive>().increase();
                 //     })
 
-                RaisedButton(
+                ElevatedButton(
                     child: Text('의존성관리'),
                     onPressed: () {
                       Get.to(DependencyManagePage());
                     }),
-                RaisedButton(
+                ElevatedButton(
                     child: Text('바인딩'),
                     onPressed: () {
                       Get.toNamed('/binding');
                     }),
-                RaisedButton(
+                ElevatedButton(
                     child: Text('파이어베이스 테스트 페이지'),
                     onPressed: () {
                       Get.toNamed('/FirebaseTestPage');

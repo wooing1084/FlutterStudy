@@ -13,7 +13,7 @@ class firstPage extends StatelessWidget {
       body: Center(
           child: Column(
             children: [
-              RaisedButton(child: Text('다음페이지 이동'),
+              ElevatedButton(child: Text('다음페이지 이동'),
                   onPressed: () {
                     //Navigator.of(context).push(MaterialPageRoute(builder: (_) => firstPage()));
                     Get.to(secondPage());

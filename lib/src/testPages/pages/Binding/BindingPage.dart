@@ -17,10 +17,12 @@ import 'package:get/get.dart';
         GetBuilder<CountControllerWithGetX>(builder: (_) {
           return Text(_.count.toString());
         }),
-        RaisedButton(onPressed: (){
+        ElevatedButton(onPressed: (){
           //Get.find<CountControllerWithGetX>().increase();
           controller.increase();
-        })
+        },
+        child: Text('+'),
+        )
       ],),);
   }
 }

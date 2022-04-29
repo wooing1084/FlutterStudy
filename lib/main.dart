@@ -1,5 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutproj/src/instaCloneCoding/InstaUploadPage.dart';
 import 'package:flutproj/src/testPages/firebaseTestPage.dart';
+//import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'src/instaCloneCoding/controller/BottomNavController.dart';
 import 'src/testPages/pages/Binding/BindingsCollect.dart';
 import 'src/testPages/pages/named/firstNamePage.dart';
@@ -13,6 +16,8 @@ import 'src/testPages/pages/test.dart';
 import 'src/instaCloneCoding/InstaMainPage.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -34,7 +39,6 @@ class MyApp extends StatelessWidget {
               titleTextStyle: TextStyle(color: Colors.black))),
       //home: MainPage(),
       home: Test(),
-      //home: FirebaseTestPage(),
       getPages: Pages(),
       initialBinding: InitBinding(),
     );

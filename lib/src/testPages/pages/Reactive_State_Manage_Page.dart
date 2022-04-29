@@ -26,7 +26,7 @@ class ReactiveStateManagePage extends StatelessWidget {
                 //   },
                 // ),
                 Obx(() => Text('${Get.find<CountControllerReactive>().count.value}')),
-                RaisedButton(child: Text('+'),
+                ElevatedButton(child: Text('+'),
                     onPressed: (){
                   Get.find<CountControllerReactive>().increase();
                     })

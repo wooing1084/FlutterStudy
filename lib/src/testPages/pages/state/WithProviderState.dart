@@ -16,7 +16,7 @@ class WithProviderState extends StatelessWidget {
               return Text('${counter.count}');
             }
           ),
-          RaisedButton(child: Text('+'),
+          ElevatedButton(child: Text('+'),
               onPressed: (){
                 Provider.of<CountControllerWithProvider>(context,listen: false).increase();
               })

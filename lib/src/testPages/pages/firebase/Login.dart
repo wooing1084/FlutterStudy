@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+//import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 
 class LoginWidget extends StatelessWidget {
   const LoginWidget({Key? key}) : super(key: key);
@@ -26,15 +27,18 @@ class LoginWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+      return Scaffold(
       appBar: AppBar(title: Text('SNS Login')),
       body: Center(
           child: Column(
         children: [
-          FlatButton(
+          FloatingActionButton(
             onPressed: signInWithGoogle,
             child: Text('google Login'),
-            color: Colors.grey.withOpacity(0.3),
+          ),
+          FloatingActionButton(
+            onPressed: signInWithGoogle,
+            child: Text('kakao login'),
           )
         ],
       )),

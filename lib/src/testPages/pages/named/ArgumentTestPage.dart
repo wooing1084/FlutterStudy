@@ -12,7 +12,7 @@ class ArgumentTestPage extends StatelessWidget {
           child: Column(
             children: [
               Text("${Get.arguments['name']} : ${Get.arguments['age']}"),
-              RaisedButton(child: Text('홈으로 이동'),
+              ElevatedButton(child: Text('홈으로 이동'),
                   onPressed: () {
                     //Navigator.of(context).push(MaterialPageRoute(builder: (_) => firstPage()));
                     Get.toNamed('/');

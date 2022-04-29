@@ -14,7 +14,7 @@ class WithGetXState extends StatelessWidget {
           GetBuilder<CountControllerWithGetX>(builder: (controller) {
             return Text("${controller.count}");
           }),
-          RaisedButton(child: Text('+'),
+          ElevatedButton(child: Text('+'),
               onPressed: (){
             Get.find<CountControllerWithGetX>().increase();
           })

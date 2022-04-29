@@ -18,7 +18,7 @@ class DependencyManagePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            RaisedButton(
+            ElevatedButton(
                 child: Text('GetPut'),
                 onPressed: () {
                   //"기본적인 put방식"
@@ -28,7 +28,7 @@ class DependencyManagePage extends StatelessWidget {
                     Get.put(DependencyController());
                   }));
                 }),
-            RaisedButton(
+            ElevatedButton(
                 child: Text('Get.lazyPut'),
                 //'LazyPut'
                 //컨트롤러의 인스턴스가 사용될때 바인딩된 컨트롤러가 생성된다.
@@ -37,7 +37,7 @@ class DependencyManagePage extends StatelessWidget {
                     Get.lazyPut(() => DependencyController());
                   }));
                 }),
-            RaisedButton(
+            ElevatedButton(
                 child: Text('Get.putAsync'),
                 onPressed: () {
                   Get.to(GetPut(), binding: BindingsBuilder(() {

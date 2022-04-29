@@ -12,10 +12,11 @@ class GetPut extends StatelessWidget {
       appBar: AppBar(
         title: Text('GetPut'),
       ),
-      body: RaisedButton(
+      body: ElevatedButton(
         onPressed: () {
           Get.find<DependencyController>().increase();
         },
+        child: Text('+')
       ),
     );
   }

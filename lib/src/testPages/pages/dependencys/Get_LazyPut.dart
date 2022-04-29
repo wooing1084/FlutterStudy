@@ -11,10 +11,11 @@ class GetLazyPut extends StatelessWidget {
       appBar: AppBar(
         title: Text('LazyPut'),
       ),
-      body: RaisedButton(
+      body: ElevatedButton(
         onPressed: () {
           Get.find<DependencyController>().increase();
         },
+          child: Text('+')
       ),
     );
   }
